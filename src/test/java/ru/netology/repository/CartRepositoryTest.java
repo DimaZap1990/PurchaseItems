@@ -17,9 +17,10 @@ class CartRepositoryTest {
         repo.save(fist);
         repo.save(second);
         repo.save(third);
-        repo.RemoveById(11);
+        repo.removeById(11);
         Assertions.assertThrows(NotFoundException.class, () -> {
-            repo.RemoveById(3);});
+            repo.removeById(3);
+        });
     }
 }
 
